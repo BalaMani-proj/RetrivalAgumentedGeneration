@@ -1,4 +1,4 @@
-# AI Chatbot Project
+# AI Chatbot
 
 This project is an AI-powered chatbot application built with Gradio, HuggingFace Transformers, and LangChain. It leverages Retrieval-Augmented Generation (RAG) to answer user questions using a local knowledge base stored in a Chroma vector database.
 
