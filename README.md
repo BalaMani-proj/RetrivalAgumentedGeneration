@@ -1,4 +1,4 @@
-# AI Chatbot Project
+# AI Chatbot
 
 This project is an AI-powered chatbot application built with Gradio, HuggingFace Transformers, and LangChain. It leverages Retrieval-Augmented Generation (RAG) to answer user questions using a local knowledge base stored in a Chroma vector database.
 
@@ -33,6 +33,10 @@ This project is an AI-powered chatbot application built with Gradio, HuggingFace
    ```powershell
    pip install -r requirements.txt
    ```
+4. **Run tests**
+   ```powershell
+   python -m unittest discover tests
+   ```
    - Required packages include: `gradio`, `torch`, `transformers`, `langchain_chroma`, `langchain_huggingface`, `sentence-transformers`, etc.
 
 4. **Download or prepare your knowledge base**
@@ -44,6 +48,14 @@ Run the Gradio chatbot UI:
 python src\mygradio.py
 ```
 - Open the provided local URL in your browser to interact with the chatbot.
+
+## Docker Deployment
+To build and run the chatbot in Docker:
+```powershell
+docker build -t chatbot .
+docker run -p 7860:7860 chatbot
+```
+The app will be available at `http://localhost:7860`.
 
 ## How It Works
 - User submits a question via the Gradio interface.
